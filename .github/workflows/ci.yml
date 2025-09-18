@@ -24,7 +24,7 @@ jobs:
             data/README.md \
             docs/*.md \
             docs/**/*.md \
-            --ignore-words-list=RUL,RMSE,MAE,R²,EIS,HPPC,UDDS,CC-BY
+            --ignore-words-list=RUL,RMSE,MAE,R^2,EIS,HPPC,UDDS,CC-BY
 
   safety:
     runs-on: ubuntu-latest
