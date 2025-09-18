@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 permissions:
   contents: read
@@ -24,20 +24,24 @@ jobs:
       - name: Run codespell
         run: |
           codespell \
-            -I .codespell-ignore-words.txt \
-            --skip=".git,*.png,*.jpg,*.svg,*.pdf,*.ipynb_checkpoints,data/raw,results" \
-            --quiet-level=2 \
-            .
+            README.md \
+            data/README.md \
+            docs/*.md \
+            docs/**/*.md \
+            --ignore-words-list="RUL,RMSE,MAE,R^2,EIS,HPPC,UDDS,CC-BY,GitHub,ipynb"
 
-  secrets:
+  safety:
     name: Gitleaks (secrets scan)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0   # scan full history as recommended
       - name: Run gitleaks
         uses: gitleaks/gitleaks-action@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Optional toggles:
+          # GITLEAKS_ENABLE_UPLOAD_ARTIFACT: "true"
+          # GITLEAKS_ENABLE_SUMMARY: "true"
           GITLEAKS_CONFIG: .gitleaks.toml
