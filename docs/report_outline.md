@@ -4,12 +4,12 @@ Use this structure to assemble the final notebook or written report. Replace the
 
 1. **Title & Abstract**
    - One-sentence project goal.
-   - 2–3 sentences summarizing dataset, approach, and key results.
+   - 2-3 sentences summarizing dataset, approach, and key results.
 
 2. **Problem Definition & Success Criteria**
    - Business/technical motivation for EV RUL prediction.
    - Define supervised learning objective (regression + optional binary decision).
-   - List evaluation metrics (RMSE, MAE, R², thresholded precision/recall).
+   - List evaluation metrics (RMSE, MAE, R^2, thresholded precision/recall).
 
 3. **Data Provenance & Description**
    - Source citation and download details.
@@ -41,7 +41,7 @@ Use this structure to assemble the final notebook or written report. Replace the
    - Hyperparameter search process and tools.
 
 8. **Results**
-   - *Table 1:* Model leaderboard (CV mean ± std for RMSE/MAE/R²).
+   - *Table 1:* Model leaderboard (CV mean ± std for RMSE/MAE/R^2).
    - *Figure 7:* Predicted vs. actual RUL (parity plot).
    - *Figure 8:* Thresholded confusion matrix or PR curve (if binary variant).
    - Discuss performance differences and practical implications.

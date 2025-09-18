@@ -1,12 +1,12 @@
-# Project Plan: Electric Vehicle Telemetry → Remaining Useful Life (RUL)
+# Project Plan: Electric Vehicle Telemetry -> Remaining Useful Life (RUL)
 
 ## Problem Definition
 - **End-of-life (EOL) threshold:** 80% of each cell's initial rated capacity.
 - **RUL label:** For reference performance test index \(i\) at cycle \(c_i\), compute \(\text{RUL}_i = c_{\text{EOL}} - c_i\), where \(c_{\text{EOL}}\) is the first cycle reaching ≤80% capacity. Restrict to cells crossing the threshold or adjust EOL (document if changed).
-- **Task:** Supervised regression with optional thresholding for maintenance decisions; evaluate using RMSE, MAE, and supporting R².
+- **Task:** Supervised regression with optional thresholding for maintenance decisions; evaluate using RMSE, MAE, and supporting R^2.
 
 ## Feature Engineering Plan
-- Capacity-based features: current capacity (Ah), percent fade vs. initial, rolling average change, last-k (3–5) capacity slopes.
+- Capacity-based features: current capacity (Ah), percent fade vs. initial, rolling average change, last-k (3-5) capacity slopes.
 - HPPC-derived features: charge/discharge resistance, delta resistance vs. baseline, temperature-adjusted resistance.
 - EIS summaries: impedance magnitude at representative frequencies, real/imaginary parts at low/high frequency bands, Nyquist arc characteristics.
 - Usage metadata: cycle index, elapsed days, charge/discharge C-rate, ambient temperature.
@@ -21,7 +21,7 @@
 
 ## Metrics & Evaluation Artifacts
 - Primary metrics: RMSE, MAE.
-- Secondary metric: R² to communicate explained variance.
+- Secondary metric: R^2 to communicate explained variance.
 - Decision support: threshold predictions at RUL < 100 cycles (or similar) to produce precision/recall/confusion matrix.
 - Confidence reporting: include CV mean ± std across folds; optional bootstrap on hold-out cell.
 
@@ -30,7 +30,7 @@
 - Capacity vs. cycle plots with 80% EOL line per cell.
 - RUL distribution histogram.
 - Correlation heatmap between engineered features and RUL.
-- Model leaderboard table (CV mean ± std of RMSE/MAE/R²).
+- Model leaderboard table (CV mean ± std of RMSE/MAE/R^2).
 - Parity plot (predicted vs. actual RUL) for validation and hold-out sets.
 - Feature importance bar chart (permutation importance or SHAP summary).
 - Residual plot segmented by cell or RUL band (optional but recommended).
@@ -38,12 +38,12 @@
 ## Milestones & Suggested Timeline
 | Milestone | Focus | Key Outputs | Target Window |
 | --- | --- | --- | --- |
-| M1 | Dataset selection & repo scaffold | README, data citation, raw snapshot stored locally | Days 1–2 |
-| M2 | Cleaning & exploratory analysis | Missingness summary, capacity trends, EDA notebook | Days 3–5 |
-| M3 | Baseline + tree models | Baseline metrics, grouped CV setup, tuning grid | Days 6–8 |
-| M4 | Model refinement & interpretation | Finalized model leaderboard, feature importances, error slices | Days 9–11 |
-| M5 | Deliverables polish | Report/notebook ready, figures exported, environment pinned | Days 12–13 |
-| M6 | Presentation | 5–15 minute video, README updated with results & links | Day 14 |
+| M1 | Dataset selection & repo scaffold | README, data citation, raw snapshot stored locally | Days 1-2 |
+| M2 | Cleaning & exploratory analysis | Missingness summary, capacity trends, EDA notebook | Days 3-5 |
+| M3 | Baseline + tree models | Baseline metrics, grouped CV setup, tuning grid | Days 6-8 |
+| M4 | Model refinement & interpretation | Finalized model leaderboard, feature importances, error slices | Days 9-11 |
+| M5 | Deliverables polish | Report/notebook ready, figures exported, environment pinned | Days 12-13 |
+| M6 | Presentation | 5-15 minute video, README updated with results & links | Day 14 |
 
 ## Task Checklist
 - [ ] Define and compute EOL/RUL labels per diagnostic checkpoint.
@@ -54,9 +54,9 @@
 - [ ] Engineer features listed above without leakage.
 - [ ] Implement grouped/time-aware cross-validation and hold-out evaluation.
 - [ ] Train baseline (mean, linear/elastic net) and tree-based models; document tuning results.
-- [ ] Evaluate using RMSE/MAE/R²; derive threshold-based metrics for maintenance decisions.
+- [ ] Evaluate using RMSE/MAE/R^2; derive threshold-based metrics for maintenance decisions.
 - [ ] Run permutation importance, partial dependence, and residual slicing for interpretability.
-- [ ] Record video walkthrough covering problem → data → modeling → results.
+- [ ] Record video walkthrough covering problem -> data -> modeling -> results.
 - [ ] Complete submission checklist before final handoff.
 
 ## Risks & Mitigations

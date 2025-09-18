@@ -1,6 +1,6 @@
-# Electric Vehicle Telemetry → Remaining Useful Life (RUL)
+# Electric Vehicle Telemetry -> Remaining Useful Life (RUL)
 
-Supervised regression project to estimate **remaining useful life (RUL)** of EV lithium-ion cells using the Stanford Onori Lab telemetry and diagnostic dataset. The work targets preventative maintenance decisions by forecasting cycles-to-failure, evaluated with **RMSE**, **MAE**, and supporting **R²**.
+Supervised regression project to estimate **remaining useful life (RUL)** of EV lithium-ion cells using the Stanford Onori Lab telemetry and diagnostic dataset. The work targets preventative maintenance decisions by forecasting cycles-to-failure, evaluated with **RMSE**, **MAE**, and supporting **R^2**.
 
 ## Why It Matters
 - EV battery RUL estimation unlocks informed warranty, maintenance scheduling, and safety interventions.
@@ -8,23 +8,23 @@ Supervised regression project to estimate **remaining useful life (RUL)** of EV 
 - Emphasis on leak-free feature engineering, grouped cross-validation, and interpretable tree-based models.
 
 ## Data Sources
-Primary dataset: **Stanford Onori Lab — EV real-driving aging dataset (NMC, 21700 cells)**
-- Real urban drive-cycle (UDDS) discharge, CC–CV charging, 10 cells, aged over ~23 months at 23 °C.
+Primary dataset: **Stanford Onori Lab - EV real-driving aging dataset (NMC, 21700 cells)**
+- Real urban drive-cycle (UDDS) discharge, CC-CV charging, 10 cells, aged over ~23 months at 23 deg C.
 - Periodic reference performance tests (RPT) providing capacity checks, hybrid pulse power characterization (HPPC), and electrochemical impedance spectroscopy (EIS).
 - Landing page: [Bits & Watts Initiative](https://bitsandwatts.stanford.edu/publications/journal-article/lithium-ion-battery-aging-dataset-based-electric-vehicle-real-driving)
 - Download & license: [OSF project (CC-BY 4.0)](https://osf.io/qsabn/?view_only=2a03b6c78ef14922a3e244f3d549de78)
 
 Backup datasets to de-risk the plan:
 1. [NASA PCoE Li-ion Battery Aging Datasets](https://data.nasa.gov/dataset/li-ion-battery-aging-datasets)
-2. [MIT–Stanford–TRI battery cycle-life dataset](https://www.tri.global/research/data-driven-prediction-battery-cycle-life-capacity-degradation)
+2. [MIT-Stanford-TRI battery cycle-life dataset](https://www.tri.global/research/data-driven-prediction-battery-cycle-life-capacity-degradation)
 3. [Kaggle EVIoT Predictive Maintenance](https://www.kaggle.com/datasets/datasetengineer/eviot-predictivemaint-dataset)
 
 For acquisition instructions, schema notes, and provenance logging, see `data/README.md`.
 
 ## Run Order
-1. `notebooks/01_clean_eda.ipynb` – clean raw diagnostics, construct RUL labels, and perform guided EDA.
-2. `notebooks/02_models_cv.ipynb` – implement grouped splits, baselines, tree ensembles, tuning, and interpretation.
-3. `notebooks/03_report.ipynb` – narrative summary notebook aggregating findings, figures, and conclusions.
+1. `notebooks/01_clean_eda.ipynb` - clean raw diagnostics, construct RUL labels, and perform guided EDA.
+2. `notebooks/02_models_cv.ipynb` - implement grouped splits, baselines, tree ensembles, tuning, and interpretation.
+3. `notebooks/03_report.ipynb` - narrative summary notebook aggregating findings, figures, and conclusions.
 
 ## Project Structure
 ```
@@ -48,25 +48,25 @@ For acquisition instructions, schema notes, and provenance logging, see `data/RE
 ```
 
 ## Planned Workflow
-1. **Problem framing** — document supervised RUL regression target and decision thresholds.
-2. **Data acquisition & documentation** — cite sources, outline schema, track provenance without storing raw files in Git.
-3. **Cleaning & exploratory analysis** — quantify missingness/outliers, validate labels, visualize degradation.
-4. **Feature engineering** — derive capacity fade metrics, HPPC resistance deltas, EIS summaries, stability indicators.
-5. **Modeling & validation** — run baselines and tree ensembles with grouped cross-validation by cell and a hold-out cell test.
-6. **Evaluation & interpretation** — report RMSE/MAE/R², decision-oriented thresholds, permutation importance, residual slices.
-7. **Deliverables** — polished notebook/report, saved figures, 5–15 minute walkthrough video, README and submission checklist updates.
+1. **Problem framing** - document supervised RUL regression target and decision thresholds.
+2. **Data acquisition & documentation** - cite sources, outline schema, track provenance without storing raw files in Git.
+3. **Cleaning & exploratory analysis** - quantify missingness/outliers, validate labels, visualize degradation.
+4. **Feature engineering** - derive capacity fade metrics, HPPC resistance deltas, EIS summaries, stability indicators.
+5. **Modeling & validation** - run baselines and tree ensembles with grouped cross-validation by cell and a hold-out cell test.
+6. **Evaluation & interpretation** - report RMSE/MAE/R^2, decision-oriented thresholds, permutation importance, residual slices.
+7. **Deliverables** - polished notebook/report, saved figures, 5-15 minute walkthrough video, README and submission checklist updates.
 
 ## Rubric Map (where to find things)
-- **Project topic & goal** → README (top) · `notebooks/03_report.ipynb` §Problem & Goal
-- **Data (cited & described)** → README §Data Sources · `data/README.md`
-- **Cleaning** → `notebooks/01_clean_eda.ipynb` · `docs/report_outline.md` §4
-- **EDA** → `notebooks/01_clean_eda.ipynb` · `docs/report_outline.md` §5
-- **Models (multiple + CV/tuning)** → `notebooks/02_models_cv.ipynb` · `docs/report_outline.md` §7
-- **Results & analysis** → `notebooks/02_models_cv.ipynb` · `docs/report_outline.md` §8
-- **Interpretability & error analysis** → `notebooks/02_models_cv.ipynb` · `docs/report_outline.md` §9
-- **Discussion & conclusion** → `notebooks/03_report.ipynb` §Discussion
-- **Video (5–15 min)** → `docs/video_outline.md`
-- **Public GitHub organization/comments** → this repository · `docs/submission_checklist.md`
+- **Project topic & goal** -> README (top) · `notebooks/03_report.ipynb` §Problem & Goal
+- **Data (cited & described)** -> README §Data Sources · `data/README.md`
+- **Cleaning** -> `notebooks/01_clean_eda.ipynb` · `docs/report_outline.md` §4
+- **EDA** -> `notebooks/01_clean_eda.ipynb` · `docs/report_outline.md` §5
+- **Models (multiple + CV/tuning)** -> `notebooks/02_models_cv.ipynb` · `docs/report_outline.md` §7
+- **Results & analysis** -> `notebooks/02_models_cv.ipynb` · `docs/report_outline.md` §8
+- **Interpretability & error analysis** -> `notebooks/02_models_cv.ipynb` · `docs/report_outline.md` §9
+- **Discussion & conclusion** -> `notebooks/03_report.ipynb` §Discussion
+- **Video (5-15 min)** -> `docs/video_outline.md`
+- **Public GitHub organization/comments** -> this repository · `docs/submission_checklist.md`
 
 ## Getting Started
 1. Create and activate a Python 3.10+ environment (virtualenv, Conda, or uv).
