@@ -1,3 +1,4 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 # Electric Vehicle Telemetry -> Remaining Useful Life (RUL)
 ![CI](https://github.com/marbatis/electric-vehicle-telemetry/actions/workflows/ci.yml/badge.svg)
 
