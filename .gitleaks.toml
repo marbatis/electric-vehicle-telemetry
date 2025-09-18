@@ -1,0 +1,8 @@
+title = "electric-vehicle-telemetry gitleaks config"
+
+[allowlist]
+description = "Allow known non-secret dataset links (OSF view-only tokens)"
+regexes = [
+  '''https?://osf\.io/[A-Za-z0-9]+/\?view_only=[A-Za-z0-9]{32}'''
+]
+
