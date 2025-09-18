@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+title: Electric Vehicle Telemetry — RUL Prediction
+message: If you use this project, please cite it as below.
+authors:
+  - family-names: Silveira
+    given-names: Marcelo
+    orcid: https://orcid.org/0000-0000-0000-0000
+date-released: 2025-09-18
+version: 0.1.0
+repository-code: https://github.com/marbatis/electric-vehicle-telemetry
+keywords:
+  - machine learning
+  - supervised learning
+  - regression
+  - RUL
+  - battery
+  - EV
+  - predictive maintenance

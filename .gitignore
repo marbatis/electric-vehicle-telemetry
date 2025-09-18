@@ -1,35 +1,11 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
-
-# Jupyter notebooks
-.ipynb_checkpoints/
-
-# Distribution / packaging
-build/
-dist/
-
-# Data artifacts (do not commit large/raw datasets)
+# Data (raw and heavy artifacts)
 data/raw/
 data/external/
 data/interim/
 data/processed/
 
-# Virtual environments
-.env
-.venv/
-venv/
-env/
-
-# IDE / editor settings
-.vscode/
-.idea/
-
-# OS files
-.DS_Store
-
-# Results and logs
+# Results & models
+results/models/
 results/**/*.csv
 results/**/*.json
 results/**/*.parquet
@@ -38,3 +14,38 @@ results/**/*.png
 results/**/*.pdf
 logs/
 *.log
+
+# Notebook caches
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv/
+venv/
+env/
+
+# Build / distribution
+build/
+dist/
+
+# IDE / editor settings
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+
+# Archives & large formats (outside tracked samples)
+*.h5
+*.pkl
+*.tar
+*.tar.gz
+*.parquet
+*.feather
+*.npy
+*.npz
