@@ -86,3 +86,18 @@ For acquisition instructions, schema notes, and provenance logging, see `data/RE
 - Onori, S. et al. *Lithium-ion battery aging dataset based on electric vehicle real-driving profiles*. 2022. Bits & Watts Initiative, Stanford University.
 - NASA Prognostics Center of Excellence. *Li-ion battery aging datasets*.
 - Severson, K. A. et al. *Data-driven prediction of battery cycle life before capacity degradation*. Nature Energy, 2019.
+
+## Results (quick view)
+- **Enriched dataset:** `results/rpt_features_labeled_enriched.csv` (101 diags, 10 cells; RUL to 80% EOL)
+- **Leaderboard (Grouped CV by cell):** `results/leaderboard.csv`
+- **Per-cell OOF (filtered, tuned):** `results/per_cell_oof_metrics_tuned.csv`
+- **Figures:** `results/figs/` → `rul_hist.png`, `cap_vs_diag_by_cell.png`, `fade_vs_diag.png`, `parity_plot_oof_tuned.png`, `enet_coeffs.png`
+
+### Reproduce (no raw data needed)
+1. Open `notebooks/01_clean_eda.ipynb` → reads `results/rpt_features_labeled_enriched.csv`, regenerates EDA plots and saves to `results/figs/`.
+2. Open `notebooks/02_models_cv.ipynb` → reads the same CSV, runs GroupKFold by `cell_id`, writes `results/leaderboard.csv` and `results/figs/parity_plot_oof_tuned.png`.
+
+**Headline (OOF filtered, tuned):** RMSE ≈ **1.35**, MAE ≈ **0.88**, R² ≈ **0.89**.
+
+> Raw data are not tracked in Git. See `data/README.md` for acquisition notes.
+
