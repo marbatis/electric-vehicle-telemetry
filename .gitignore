@@ -6,12 +6,6 @@ data/processed/
 
 # Results & models
 results/models/
-results/**/*.csv
-results/**/*.json
-results/**/*.parquet
-results/**/*.xlsx
-results/**/*.png
-results/**/*.pdf
 logs/
 *.log
 
