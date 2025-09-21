@@ -26,7 +26,6 @@ For acquisition instructions, schema notes, and provenance logging, see `data/RE
 ## Run Order
 1. `notebooks/01_clean_eda.ipynb` - clean raw diagnostics, construct RUL labels, and perform guided EDA.
 2. `notebooks/02_models_cv.ipynb` - implement grouped splits, baselines, tree ensembles, tuning, and interpretation.
-3. `notebooks/03_report.ipynb` - narrative summary notebook aggregating findings, figures, and conclusions.
 
 ## Project Structure
 ```
@@ -41,7 +40,6 @@ For acquisition instructions, schema notes, and provenance logging, see `data/RE
 │   ├── report_outline.md    # report template aligned to rubric
 │   ├── submission_checklist.md
 │   └── video_outline.md
-├── notebooks/               # 01_clean_eda.ipynb, 02_models_cv.ipynb, 03_report.ipynb
 ├── results/                 # exported figures/tables (kept small)
 ├── src/
 │   └── data/onori_loader.py # data access stubs & usage guidance
@@ -59,14 +57,12 @@ For acquisition instructions, schema notes, and provenance logging, see `data/RE
 7. **Deliverables** - polished notebook/report, saved figures, 5-15 minute walkthrough video, README and submission checklist updates.
 
 ## Rubric Map (where to find things)
-- **Project topic & goal** -> README (top) · `notebooks/03_report.ipynb` §Problem & Goal
 - **Data (cited & described)** -> README §Data Sources · `data/README.md`
 - **Cleaning** -> `notebooks/01_clean_eda.ipynb` · `docs/report_outline.md` §4
 - **EDA** -> `notebooks/01_clean_eda.ipynb` · `docs/report_outline.md` §5
 - **Models (multiple + CV/tuning)** -> `notebooks/02_models_cv.ipynb` · `docs/report_outline.md` §7
 - **Results & analysis** -> `notebooks/02_models_cv.ipynb` · `docs/report_outline.md` §8
 - **Interpretability & error analysis** -> `notebooks/02_models_cv.ipynb` · `docs/report_outline.md` §9
-- **Discussion & conclusion** -> `notebooks/03_report.ipynb` §Discussion
 - **Video (5-15 min)** -> `docs/video_outline.md`
 - **Public GitHub organization/comments** -> this repository · `docs/submission_checklist.md`
 
