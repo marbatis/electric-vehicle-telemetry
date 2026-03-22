@@ -2,7 +2,7 @@
 # Electric Vehicle Telemetry -> Remaining Useful Life (RUL)
 ![CI](https://github.com/marbatis/electric-vehicle-telemetry/actions/workflows/ci.yml/badge.svg)
 
-Supervised regression project to estimate **remaining useful life (RUL)** of EV lithium-ion cells using the Stanford Onori Lab telemetry and diagnostic dataset. The work targets preventative maintenance decisions by forecasting cycles-to-failure, evaluated with **RMSE**, **MAE**, and supporting **R^2**.
+EV battery telemetry modeling for remaining useful life prediction with reproducible ML workflow, using the Stanford Onori Lab diagnostic dataset and grouped cross-validation.
 
 ## Why It Matters
 - EV battery RUL estimation unlocks informed warranty, maintenance scheduling, and safety interventions.
@@ -96,4 +96,3 @@ For acquisition instructions, schema notes, and provenance logging, see `data/RE
 **Headline (OOF filtered, tuned):** RMSE ≈ **1.35**, MAE ≈ **0.88**, R² ≈ **0.89**.
 
 > Raw data are not tracked in Git. See `data/README.md` for acquisition notes.
-
